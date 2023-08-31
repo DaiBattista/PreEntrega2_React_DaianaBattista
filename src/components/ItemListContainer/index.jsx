@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import style from './style.module.css'
 
@@ -37,7 +36,7 @@ export default function ItemListContainer() {
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>{item.description}</Card.Text>
                                 {/* <Button variant='dark'>Agregar al carrito</Button> */}
-                                <Link to={`/item/${item.id}`}>Agregar al carrito</Link>
+                                <Link to={`/item/${item.id}`} className={style['btn_carrito']}>Agregar al carrito</Link>
                             </Card.Body>
                         </Card>
                     </Col>
