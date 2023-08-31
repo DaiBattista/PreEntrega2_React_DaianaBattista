@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
@@ -37,7 +37,8 @@ export default function ItemListContainer() {
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>{item.description}</Card.Text>
-                                <Button variant='dark'>Agregar al carrito</Button>
+                                {/* <Button variant='dark'>Agregar al carrito</Button> */}
+                                <Link to={`/item/${item.id}`}>Agregar al carrito</Link>
                             </Card.Body>
                         </Card>
                     </Col>

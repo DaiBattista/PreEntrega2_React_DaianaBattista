@@ -15,7 +15,7 @@ export const NavBar = () => {
                         <Link to='category/nuevo'>Nuevos Juegos</Link>
                         <Link to='category/clasico'>Juegos Clasicos</Link>
                         <Link to='category/lanzamiento'>Proximos lanzamientos</Link>
-                        <Link to=''><CartWidget /></Link>
+                        <a class="nav-link" href="#"><CartWidget/></a>
                     </div>
                 </div>
             </div>
