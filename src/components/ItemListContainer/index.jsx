@@ -14,12 +14,11 @@ export default function ItemListContainer() {
         const getProducts = async () => {
             const response = await fetch('/data/productos.json')
             const productos = await response.json()
-
             const productosFiltrados = productos.filter(producto => producto.category == id)
 
-            if (productosFiltrados.length > 0) return setItems(productosFiltrados)
+            const items = productosFiltrados.length > 0 ? productosFiltrados : productos
 
-            setItems(productos)
+            setItems(items)
         }
 
         getProducts()

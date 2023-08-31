@@ -12,7 +12,6 @@ export default function ItemDetailContainer() {
             const productos = await response.json()
     
             const productoFiltrado = productos.find(producto => producto.id == parseInt(id))
-    
             setDetail(productoFiltrado)
         }
 
