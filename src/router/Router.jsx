@@ -1,6 +1,7 @@
 import '../App.css'
 import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
+import ItemDetailContainer from '../components/ItemDetailContainer'
 import {
     BrowserRouter,
     Routes,
@@ -19,7 +20,8 @@ export default function Router() {
             <Routes>
                 <Route path="/" element={<ItemListContainer />} />
                 <Route path="/category/:id" element={<ItemListContainer />} />
-                {/* <Route path="users/*" element={<Users />} /> */}
+                <Route path="/item/:id" element={<ItemDetailContainer />} />
+
             </Routes>
         </BrowserRouter >
     )
