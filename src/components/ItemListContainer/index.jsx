@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import img from '../img/mario_1.png'
 import style from './style.module.css'
 
 export default function ItemListContainer() {
@@ -33,7 +32,7 @@ export default function ItemListContainer() {
                 {items.map(item => (
                     <Col key={item.id} lg={4} className='mb-4'>
                         <Card>
-                            <Card.Img variant='top' src={img} />
+                            <Card.Img variant='top' src={item.img} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>{item.description}</Card.Text>
